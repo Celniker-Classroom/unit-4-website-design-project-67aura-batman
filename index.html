@@ -2,26 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <script src="script.js" defer></script>
+    <title>Intro to CS Flashcards</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Your html goes here...</h1>
-    <br>See the <a href="README.md">README</a> for project details
+    <h1 id="home">Flashcard World Home</h1>
+    <p>Welcome! Use the links below to move between my subpages.</p>
+
+    <ul>
+        <li><a href="#subjects">View Subjects</a></li>
+        <li><a href="#create">Create a Card</a></li>
+        <li><a href="#about">About This Project</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="subjects">Public Subjects</h2>
+    <p>Here is what other students have made:</p>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Creator</th>
+            <th>Difficulty</th>
+        </tr>
+        <tr>
+            <td><a href="#python">Python Basics</a></td>
+            <td>Jill Smith</td>
+            <td>Easy</td>
+        </tr>
+        <tr>
+            <td><a href="#html">HTML Tags</a></td>
+            <td>John Doe</td>
+            <td>Medium</td>
+        </tr>
+        <tr>
+            <td><a href="#biology">Biology</a></td>
+            <td>Jane Doe</td>
+            <td>Medium</td>
+        </tr>
+    </table>
+
+    <section id="python">
+        <h3>Python Basics (Student flashcards)</h3>
+        <p>- What is a variable? A storage location.</p>
+        <p>- What is a list? An ordered collection.</p>
+        <p><a href="#subjects">Back to Subjects</a></p>
+    </section>
+
+    <section id="html">
+        <h3>HTML Tags (Student flashcards)</h3>
+        <p>- &lt;p&gt; is a paragraph element.</p>
+        <p>- &lt;a&gt; is a link element.</p>
+        <p><a href="#subjects">Back to Subjects</a></p>
+    </section>
+
+    <section id="biology">
+        <h3>Biology (Student flashcards)</h3>
+        <p>- What is photosynthesis? Conversion of light to energy.</p>
+        <p>- What is a cell? The basic unit of life.</p>
+        <p><a href="#subjects">Back to Subjects</a></p>
+    </section>
+
+    <p><a href="#home">Back to Top</a></p>
+    <hr>
+
+    <h2 id="create">Create Your Own</h2>
+    <p>Type your question and answer below:</p>
+
+    <input type="text" id="userQ" placeholder="Front of card">
+    <input type="text" id="userA" placeholder="Back of card">
+    <button id="makeCardBtn">Display My Card</button>
+    <button id="addToSetBtn">Add Card to Set</button>
+
+    <h3>Your Flashcard:</h3>
+    <div class="card-box" id="cardBox">
+        <h4 id="display">The card is empty!</h4>
+        <button id="flipBtn">Flip Card</button>
+    </div>
+
+    <h3>Your Flashcard Set</h3>
+    <p id="setCount">0 cards in this set.</p>
+    <ol id="cardSetList"></ol>
+    <button id="clearSetBtn">Clear Card Set</button>
+    <button id="saveSetBtn">Save Set Locally</button>
+
+    <p><a href="#home">Back to Top</a></p>
+    <hr>
+
+    <h2 id="about">About Page</h2>
+    <p>This is for my Intro to Computer Science class.</p>
+
+    <ol>
+        <li>I learned how to use Headings</li>
+        <li>I learned how to use Tables</li>
+        <li>I learned how to make Links</li>
+    </ol>
+
+    <p>Click the image below to go to W3Schools for help:</p>
+    <a href="https://www.w3schools.com" target="_blank" rel="noreferrer">
+        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools logo" style="width:100px;height:auto;" />
+    </a>
 </body>
-</html>
-    <head>
-        <title>My HTML PAge</title>
-    </head>
-    <body>
-        <!--this is my heading-->
-        <h1>I am batman</h1>
-        <h2>No i am batman</h2>
-        <h3>nah bruh i am batman</h3>
-        <p> no i am spiderman
-            <br><a href="https://www.w3schools.com">w schools</a>
-        </p>
-    </body>
 </html>
 

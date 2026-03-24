@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intro to CS Flashcards</title>
+    <style>
+        /* This makes the table and cards look organized like your example */
+        table, th, td { border: 1px solid black; padding: 10px; }
+        .card-box { border: 5px solid blue; padding: 20px; width: 300px; background-color: lightgrey; }
+    </style>
+</head>
+<body>
+
+    <!-- SECTION 1: HOME -->
+    <h1 id="home">Flashcard World Home</h1>
+    <p>Welcome! Use the links below to move between my subpages.</p>
+    
+    <ul>
+        <li><a href="#subjects">View Subjects</a></li>
+        <li><a href="#create">Create a Card</a></li>
+        <li><a href="#about">About This Project</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- SECTION 2: SUBJECTS -->
+    <h2 id="subjects">Public Subjects</h2>
+    <p>Here is what other students have made:</p>
+    
+    <table>
+      <tr>
+        <th>Subject</th>
+      </tr>
+      <tr>
+        <td>Biology</td>
+        <td>Math</td>
+        <td>Chemistry</td>
+        <td>Physics</td>
+        <td>History</td>
+        <td>Geography</td>
+        <td>Literature</td>
+        <td>Computer Science</td>
+      </tr>
+    </table>
+    
+    <p><a href="#home">Back to Top</a></p>
+    <hr>
+
+    <!-- SECTION 3: CREATE -->
+    <h2 id="create">Create Your Own</h2>
+    <p>Type your question and answer below:</p>
+    
+    <input type="text" id="userQ" placeholder="Front of card">
+    <input type="text" id="userA" placeholder="Back of card">
+    <button onclick="makeCard()">Display My Card</button>
+
+    <h3>Your Flashcard:</h3>
+    <div class="card-box">
+        <h4 id="display">The card is empty!</h4>
+        <button onclick="flip()">Flip Card</button>
+    </div>
+
+    <p><a href="#home">Back to Top</a></p>
+    <hr>
+
+    <!-- SECTION 4: ABOUT -->
+    <h2 id="about">About Page</h2>
+    <p>This is for my Intro to Computer Science class.</p>
+    
+    <ol>
+        <li>I learned how to use Headings</li>
+        <li>I learned how to use Tables</li>
+        <li>I learned how to make Links</li>
+    </ol>
+
+    <p>Click the image below to go to W3Schools for help:</p>
+    <a href="https://www.w3schools.com">
+        <img src="https://w3schools.com" alt="HTML5 Icon" style="width:100px;height:100px;">
+    </a>
+
+    <!-- Beginner Script to make the "Create" page actually work -->
+    <script>
+        let qValue = "";
+        let aValue = "";
+        let showingFront = true;
+
+        function makeCard() {
+            // Get text from the inputs
+            qValue = document.getElementById("userQ").value;
+            aValue = document.getElementById("userA").value;
+            // Put the question in the box
+            document.getElementById("display").innerText = qValue;
+            showingFront = true;
+        }
+
+        function flip() {
+            if (showingFront) {
+                document.getElementById("display").innerText = aValue;
+            } else {
+                document.getElementById("display").innerText = qValue;
+            }
+            showingFront = !showingFront;
+        }
+    </script>
+
+</body>
+</html>
+
+  
