@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Timer</title>
-<link rel="stylesheet" href="style.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="topnav">
         <a href="index.html">Home</a>
         <a href="create.html">Create</a>
         <a href="timer.html">Timer</a>
-        <a href="tips.html"> StudyTips</a>
+        <a href="tips.html">Study Tips</a>
     </div>
-    <div class=""container
-    <h1> Study Timer</h1>
-    <p> Set a timer for your study session.</p>
 
-    <input id="minutes" placeholder="Minutes">
-    <button id="startTimerBtn">Start Timer</button>
+    <div class="container">
+        <h1>Study Timer</h1>
+        <p>Set a timer for your study session.</p>
 
-    <h2 id="time"></h2>
+        <input id="minutes" type="number" min="1" placeholder="Minutes">
+        <button id="startTimerBtn">Start Timer</button>
+
+        <h2 id="timer"></h2>
     </div>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
