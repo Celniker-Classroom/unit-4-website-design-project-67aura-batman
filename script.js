@@ -18,9 +18,20 @@ if (createBtn) {
             return;
         }
 
+        showingFront = true;
+        card.classList.remove("Flipped");
+        card.innerText = q;
+
         if (card) {
-            card.innerText = q;
-            showingFront = true;
+            card.addEventListener("click", () => {
+                if (!q || !a) return;
+                card.classList.toggle("Flipped");
+
+                setTimeout(() => {
+                    card.innerText = showingFront ? a : q;
+                    showingFront = !showingFront;
+                }, 150);
+            });
         }
     });
 }
