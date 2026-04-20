@@ -100,3 +100,17 @@ th {
     color: white;
 }
 
+/* This targets the box holding the images */
+.photo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* This fixes the "Giant Photo" problem */
+.photo-row img {
+  width: 250px; /* Forces them to a manageable size */
+  height: auto;  /* Keeps them from looking squished */
+}
