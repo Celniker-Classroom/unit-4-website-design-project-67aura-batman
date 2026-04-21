@@ -114,3 +114,10 @@ th {
   width: 250px; /* Forces them to a manageable size */
   height: auto;  /* Keeps them from looking squished */
 }
+.class-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
